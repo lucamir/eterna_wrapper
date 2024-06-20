@@ -13,13 +13,13 @@ Instead of place the folder on `C:\\` you need to place the folder on `/home/use
 Command for run the prediction script:
 
 ```sh
-python3 .\main.py --sitename=ESLN --startdate=01/01/2024 --enddate=10/01/2024 --samplerate=10
+python3 .\main.py --sitename=PARIS --startdate=01/01/2024 --enddate=10/01/2024 --samplerate=10
 ```
 
 or in short form:
 
 ```sh
-python3 .\main.py -s ESLN -sd 01/01/2024 -ed 10/01/2024 -sr=10
+python3 .\main.py -s PARIS -sd 01/01/2024 -ed 10/01/2024 -sr=10
 ```
 
 **_Obviously you need to have the sites folder, you find one site example folder in this repo as example and you need to tune the params like you are using the stock eterna._**
