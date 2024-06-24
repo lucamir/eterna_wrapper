@@ -39,14 +39,14 @@ def main():
     _predictions_prd = f"{_script_path}/predictions/{_sitename}.prd"
     _predictions_csv = f"{_script_path}/predictions/{_sitename}_{_startdate_str}_{_enddate_str}_{_samplerate}s.csv"
 
-    update_project(PROJECT_PATH, _sitename)
-    update_site_ini(_sites_ini, _startdate, _enddate, _samplerate)
-    copy_file(_sites_ini, _processed_ini)
-    predict()
-    delete_file(_processed_ini)
-    move_file(_processed_prd, _predictions_prd)
-    parse_prediction(_predictions_prd, _predictions_csv, _samplerate)
-    delete_file(_predictions_prd)
+    update_project(PROJECT_PATH, _sitename) # add to the project file the name of the ini file to laod.
+    update_site_ini(_sites_ini, _startdate, _enddate, _samplerate) # update the ini with the params that you set as arguments
+    copy_file(_sites_ini, _processed_ini) # copy the ini file to the project's root folder
+    predict() # run the prediction
+    delete_file(_processed_ini) # delete the ini file from the root folder
+    move_file(_processed_prd, _predictions_prd) # move the prd file into the predictions folder
+    parse_prediction(_predictions_prd, _predictions_csv, _samplerate) # parse the prd file and save it as csv
+    delete_file(_predictions_prd) # delete the prd file from the predictions folder
 
 if __name__ == '__main__':
     main()
