@@ -10,7 +10,7 @@ Once the files are in the correct location, open a terminal window and run the f
 For Ubuntu, the only difference is the path where the folder needs to be placed. Instead of placing it under `C:\\`, it should go under `/home/user/.wine/drive_c/`. 
 Refer to the Wine documentation to determine the correct location of the `C:\\` equivalent folder.
 
-Command to Run the Prediction Script
+### Command to Run the Prediction Script
 
 Full command syntax:
 ```sh
