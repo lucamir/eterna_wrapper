@@ -1,25 +1,25 @@
 # Wrapper python for Eterna 3.30.
+This Python script provides a simple interface for running the Eterna prediction Windows .exe file.
 
-This python code provides a simple interface to run the eterna prediction windows .exe
+To use this wrapper, the contents of this repository must be placed under the `C:\\` path. Additionally, rename the main folder from eterna_wrapper to eterna33.
 
-The content of this repository need to be placed under the `C:\\` path and renamed the main folder from "eterna_wrapper" to "eterna33".
-Once the code is placed on the correct path you just need to open a terminal window and run the following command.
+Once the files are in the correct location, open a terminal window and run the following command:
 
-**NOTICE: This code was also tested on an Ubuntu OS with wine installed!**
+**_Note: This code has also been tested on Ubuntu with Wine installed!_**
 
-If you are using Ubuntu the only difference is related to the path where you need to place the folder.
-Instead of place the folder on `C:\\` you need to place the folder on `/home/user/.wine/drive_c/` check the wine documentation for detect the correct position of the `C:\\` equivalent folder.
+For Ubuntu, the only difference is the path where the folder needs to be placed. Instead of placing it under `C:\\`, it should go under `/home/user/.wine/drive_c/`. 
+Refer to the Wine documentation to determine the correct location of the `C:\\` equivalent folder.
 
-Command for run the prediction script:
+Command to Run the Prediction Script
 
+Full command syntax:
 ```sh
 python3 .\main.py --sitename=PARIS --startdate=01/01/2024 --enddate=10/01/2024 --samplerate=10
 ```
 
-or in short form:
-
+Or in shorthand form:
 ```sh
 python3 .\main.py -s PARIS -sd 01/01/2024 -ed 10/01/2024 -sr=10
 ```
 
-**_Obviously you need to have the sites folder, you find one site example folder in this repo as example and you need to tune the params like you are using the stock eterna._**
+**_Note: Ensure you have the sites folder set up. An example sites folder is included in this repository. You will need to configure the parameters according to your use case, similar to how you would use the stock Eterna tool._**
