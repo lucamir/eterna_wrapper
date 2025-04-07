@@ -1,14 +1,14 @@
 # Wrapper python for Eterna 3.30.
-This Python script provides a simple interface for running the Eterna prediction Windows .exe file.
+This Python script provides a simple interface for executing the Eterna prediction Windows .exe file.
 
-To use this wrapper, the contents of this repository must be placed under the `C:\\` path. Additionally, rename the main folder from eterna_wrapper to eterna33.
+To use this wrapper, the contents of the repository must be placed under the `C:\\` directory. Additionally, the main folder should be renamed from eterna_wrapper to eterna33.
 
-Once the files are in the correct location, open a terminal window and run the following command:
+Once the files are in the correct location, a terminal window should be opened and the following command executed.
 
-**_Note: This code has also been tested on Ubuntu with Wine installed!_**
+**Note: This code has also been tested on Ubuntu using Wine.**
 
-For Ubuntu, the only difference is the path where the folder needs to be placed. Instead of placing it under `C:\\`, it should go under `/home/user/.wine/drive_c/`. 
-Refer to the Wine documentation to determine the correct location of the `C:\\` equivalent folder.
+For Ubuntu, the only difference lies in the folder path. Instead of placing it under `C:\\`, it should be placed under `/home/user/.wine/drive_c/`. 
+Refer to the Wine documentation to determine the correct equivalent path for the `C:\\` drive.
 
 ### Command to Run the Prediction Script
 
