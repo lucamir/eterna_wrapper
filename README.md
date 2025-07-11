@@ -1,25 +1,52 @@
-# Wrapper python for Eterna 3.30.
-This Python script provides a simple interface for executing the Eterna prediction Windows .exe file.
+# Python Wrapper for Eterna 3.30
 
-To use this wrapper, the contents of the repository must be placed under the `C:\\` directory. Additionally, the main folder should be renamed from eterna_wrapper to eterna33.
+This Python script provides a simple interface to execute the Eterna prediction tool (Windows `.exe` file) from the command line.
 
-Once the files are in the correct location, a terminal window should be opened and the following command executed.
+## 📁 Installation & Setup
 
-**Note: This code has also been tested on Ubuntu using Wine.**
+To use this wrapper correctly:
 
-For Ubuntu, the only difference lies in the folder path. Instead of placing it under `C:\\`, it should be placed under `/home/user/.wine/drive_c/`. 
-Refer to the Wine documentation to determine the correct equivalent path for the `C:\\` drive.
+- Place the contents of this repository directly under the `C:\` directory.
+- Rename the main folder from `eterna_wrapper` to `eterna33`.
 
-### Command to Run the Prediction Script
+After setup, your folder structure should look like:
 
-Full command syntax:
-```sh
-python3 .\main.py --sitename=PARIS --startdate=01/01/2024 --enddate=10/01/2024 --samplerate=10
+````markdown
+C:\
+└── eterna33\
+    ├── main.py
+    ├── predict.exe
+    └── sites\
+````
+
+
+### 🐧 Running on Ubuntu (via Wine)
+
+This wrapper has also been tested on **Ubuntu using Wine**.
+
+In this case:
+
+- Place the files under `/home/your-user/.wine/drive_c/eterna33/`
+- Refer to the Wine documentation to confirm the correct location of your `C:\` drive.
+
+## 🚀 Running the Prediction Script
+
+### Full Syntax:
+```bash
+python3 main.py --sitename=PARIS --startdate=01/01/2024 --enddate=10/01/2024 --samplerate=10
 ```
 
-Or in shorthand form:
-```sh
-python3 .\main.py -s PARIS -sd 01/01/2024 -ed 10/01/2024 -sr=10
+### Shorthand Syntax:
+```bash
+python3 main.py -s PARIS -sd 01/01/2024 -ed 10/01/2024 -sr=10
 ```
 
-**_Note: Ensure you have the sites folder set up. An example sites folder is included in this repository. You will need to configure the parameters according to your use case, similar to how you would use the stock Eterna tool._**
+
+**_Note: Ensure the sites folder is correctly set up.
+An example sites folder is included in this repository. You will need to configure your site-specific parameters similarly to how you would with the stock Eterna tool.
+_**
+
+## 🛠 Dependencies
+
+Python >= 3.6
+Wine (required for Linux users)
