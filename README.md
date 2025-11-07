@@ -48,5 +48,5 @@ _**
 
 ## 🛠 Dependencies
 
-Python >= 3.6
-Wine (required for Linux users)
+- Python >= 3.6
+- Wine (required for Linux users)
