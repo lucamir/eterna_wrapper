@@ -1,11 +1,11 @@
 import argparse
 from datetime import datetime
 
-from lib.constants import PROJECT_PATH, script_path
+from lib.constants import PROJECT_PATH, PREDICTIONS_PATH, script_path
 from lib.eterna import update_project, update_site_ini, predict, parse_prediction
 from lib.utils import detect_datetime_format, copy_file, move_file, delete_file, clear_uft
 
-def main():
+def main() -> None:
     clear_uft() # delete the uft files inside the commdat for prevent error related to the hardware
 
     # parse arguments
@@ -26,7 +26,7 @@ def main():
     # detect datetime format and format date
     _startdate_format = detect_datetime_format(_startdate)
     _enddate_format = detect_datetime_format(_enddate)
-    _startdate= datetime.strptime(_startdate, _startdate_format)
+    _startdate = datetime.strptime(_startdate, _startdate_format)
     _enddate = datetime.strptime(_enddate, _enddate_format)
 
     _startdate_str = _startdate.strftime('%Y-%m-%d')
@@ -36,8 +36,8 @@ def main():
     _sites_ini = f"{_script_path}/sites/{_sitename}/{_sitename}.ini"
     _processed_ini = f"{_script_path}/{_sitename}    .ini"
     _processed_prd = f"{_script_path}/{_sitename}    .prd"
-    _predictions_prd = f"{_script_path}/predictions/{_sitename}.prd"
-    _predictions_csv = f"{_script_path}/predictions/{_sitename}_{_startdate_str}_{_enddate_str}_{_samplerate}s.csv"
+    _predictions_prd = f"{PREDICTIONS_PATH}/{_sitename}.prd"
+    _predictions_csv = f"{PREDICTIONS_PATH}/{_sitename}_{_startdate_str}_{_enddate_str}_{_samplerate}s.csv"
 
     update_project(PROJECT_PATH, _sitename) # add to the project file the name of the ini file to laod.
     update_site_ini(_sites_ini, _startdate, _enddate, _samplerate) # update the ini with the params that you set as arguments

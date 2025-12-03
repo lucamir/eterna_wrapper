@@ -6,7 +6,7 @@ WORKING_DIRECTORY = getcwd()
 PARENT_WORKING_DIRECTORY = abspath(path.join(WORKING_DIRECTORY, pardir))
 
 # ------- PATHS -------
-def script_path():
+def script_path() -> str:
     """
     Function that return the main project directory
 
@@ -25,3 +25,4 @@ def script_path():
 
 PROJECT_PATH = f"{script_path()}/project"
 COMMDAT_PATH = f"{script_path()}/commdat"
+PREDICTIONS_PATH = f"{script_path()}/predictions"
